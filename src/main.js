@@ -16,9 +16,13 @@ let minutes = 0;
 let seconds = 0;
 let isPaused = false;
 
-//start timer
-startBtn.addEventListener("click", startTimer)
 
+startBtn.addEventListener("click", startTimer)
+pauseBtn.addEventListener("click", pauseTimer)
+continueBtn.addEventListener("click", continueTimer)
+resetBtn.addEventListener("click", resetTimer)
+
+//start timer
 function startTimer(){
 
     interval = setInterval(() => {
@@ -43,19 +47,44 @@ function startTimer(){
 
         }
     },1000);
+
+    startBtn.style.display = "none"
+    pauseBtn.style.display = "block"
 }
 
-// #02Note
-    //Format Timer
+// #02Note - functions
 
+//format timer
 function formatTime(time){
     return time < 10 ? `0${time}`: time; 
 }
 
-
-
-//resume timer
-
 //pause timer
+function pauseTimer (){
+    isPaused = true
+    pauseBtn.style.display = "none"
+    continueBtn.style.display = "block"
+}
 
 //continue timer
+function continueTimer (){
+    isPaused = false
+    pauseBtn.style.display = "block"
+    continueBtn.style.display = "none"
+}
+
+//reset timer
+function resetTimer (){
+    clearInterval(interval);
+    hour = 0;
+    minutes = 0;
+    seconds = 0;
+    
+    secondsEl.textContent = "00"
+    minutesEl.textContent = "00"
+    hourEl.textContent = "00"
+
+    startBtn.style.display = "block"
+    pauseBtn.style.display = "none"
+    continueBtn.style.display = "none"
+}
