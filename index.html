@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style.css">
-    <script type="text/javascript" src="src/main.js"></script>
+    <script type="text/javascript" src="src/main.js" defer></script>
     <title>Timer Page</title>
+    <!-- Link Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Link icons (Sass)-->
+    <!-- Link-->
 </head>
 <body>
     
@@ -13,20 +19,27 @@
     <!-- não por agora-->
 </header>
     <main>
-<div class="app" id="app">
-    <div class="timer-container">
-        <div class="timer-content">
-            <p class="timer_text">Cronometro.js</p>
-            
-        </div>
+        <div class="app" id="app">
+            <div class="timer-container">
+                <h1 class="timer_text">Cronometro.js</h1>
+                <div class="timer-content">
+                    <div class="timer">
+                        <div class="time" id="hour">00</div>
+                        <div class="separador">: </div>
+                        <div class="time" id="minutes">00</div>
+                        <div class="separador">:</div>
+                        <div class="time" id="seconds">00</div>
+                    </div>   
+                </div>
 
-        <div class="btn-container">
-            <button id="btn-start">Iniciar</button>
-            <button id="btn-pause">Pausar</button>
-            <button id="btn-reset">Resetar</button>
+                <div class="btn-container">
+                    <button class="btn" id="btn-start">Iniciar</button>
+                    <button class="btn" id="btn-pause">Pausar</button>
+                    <button class="btn" id="btn-continue">Continuar</button>
+                    <button class="btn" id="btn-reset">Resetar</button>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 </main>
 
     <footer>
