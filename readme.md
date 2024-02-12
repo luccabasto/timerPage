@@ -8,9 +8,6 @@
 - [⭐] Criar componente cronômetro e suas fuctions - (start-pause-resume).
 
 ## 
-<i>Extra!!!</i>
-<p>Ao longo do código utilizarei Sass para práticar o uso. </p> 
 
-- [ ] Incrementar o style com o Sass.
 
 
